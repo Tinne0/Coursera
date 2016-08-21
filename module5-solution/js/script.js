@@ -119,13 +119,17 @@ function buildAndShowHomeHTML (categories) {
       //
       // var homeHtmlToInsertIntoMainPage = ....
       var html = categoryHtml;
-      var homeHtmlToInsertIntoMainPage = insertProperty (html, "randomCategoryShortName", randomCategoryShortName);
+      
+      html = insertProperty (html, "randomCategoryShortName", randomCategoryShortName);
       
       
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
       // of how to do that.
       // ....
+      var homeHtmlToInsertIntoMainPage =  buildMenuItemsViewHtml(categoryMenuItems,
+                                   menuItemsTitleHtml,
+                                   menuItemHtml);
       insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
       
 
